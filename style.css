@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+.header{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./images/header-img1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    font-family: 'Playpen Sans';
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.first-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.first-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    font-family: 'Playpen Sans';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-content h4{
+    font-family: 'Playpen Sans';
+    color: #fff;
+    font-size: 3em;
+    line-height: 80px;
+    font-weight: 900;
+    width: 1300px;
+    margin-left: 120px;
+    margin-bottom: 10px;
+
+}
+
+.header-content h6{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.header-content p{
+    
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.email-signup{
+    background-color: rgba(0,0,0,0.3);
+    height: 50px;
+    border: 0.3mm solid rgba(254, 253, 253, 0.756);
+    width: 45%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.email-signup input{
+    font-family: 'Quicksand', sans-serif;
+    background: transparent;
+    background-color: transparent;
+    flex: 1;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.email-signup button{
+    font-family: 'Playpen Sans';
+    width: 30%;
+    height: 60px;
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 30px;
+    margin-left: 10px;
+
+}
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px
+}
+
+.break{
+    width: 100%;
+    height: 8px;
+    background-color: rgb(45, 42, 42);
+    border: 0;
+}
+
+.faq{
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-family: 'Playpen Sans';
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion label{
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: inherit;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type = "checkbox"]:checked+label+.content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type = "checkbox"]:checked+label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+    font-size: 13px;
+}
+
+small{
+    font-size: 25px;
+}
+
+
+
+
+.footer{
+    font-family: 'Quicksand', sans-serif;
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+    margin-bottom: 60px;
+}
+
+.footer h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+
+}
+.footer .col a{
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+.footer .row{
+    align-items:  flex-start;
+    padding: 10px 0;
+
+}
+
+.footer .first-btn{
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* @media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+
+    nav button{
+        padding: 5px 10px;
+    }
+
+    nav .first-btn{
+        padding: 4px 8px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1{
+        font-size: 30px;
+    }
+
+    .email-signup button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+
+} */
+
+.email-signup button:hover{
+    transition-delay: 0.3s;
+    transition-property: inherit;
+    opacity: 0.7;
+}
+
+.faq .accordion li label:hover{
+    transition-delay: 0.1s;
+    background-color: rgba(84, 82, 82, 0.937);
+}
